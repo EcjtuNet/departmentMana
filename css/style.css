@@ -28,7 +28,7 @@ td span {
 	cursor: pointer;
 }
 
-td span:hover {
+span.add {
 	font-weight: bold;
 	background: red;
 	color: #fff;
@@ -91,7 +91,7 @@ td span:hover {
 
 
 /* form.html */
-#article {
+#article, div.value {
 	margin-right: 30px;
 }
 

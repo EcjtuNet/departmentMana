@@ -6,13 +6,20 @@
 	<meta name="author" content="zvenshy@gmail.com">
 	<title>新闻部门管理</title>
 	<link href="http://cdn.bootcss.com/bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="../css/style.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 	<div class="row-fluid">
 		<div class="span10 offset1">
 			<legend>新闻部门管理</legend>
-			<div id="login"><a href="#loginModal" role="button" data-toggle="modal">登录</a></div>
+			<?php
+			session_start ();
+		    if(!isset($_SESSION['un']))
+			{
+				echo '<div id="login"><a href="#loginModal" role="button" data-toggle="modal">登录</a></div>';
+			}else{
+				echo '<div id="login"><a href="form.php">后台</a></div>';
+			}?>
 		</div>
 	</div>
 	<div class="row-fluid"><div class="wrap"><div class="alert">正在处理...</div></div></div>
@@ -21,14 +28,14 @@
 			<div class="modal-content">			
 				<div class="modal-body">
 					<button class="close" data-dismiss="modal" aria-hidden="true">&times</button>
-					<form action="">
+					<form action="login.php" method="POST">
 						<div class="input-prepend username">
 							<span class="add-on span3">用户名</span>
-							<input type="text" id="username" placeholder="Username">	
+							<input type="text" id="username" name="username" placeholder="Username">	
 						</div>
 						<div class="input-prepend password">
 							<span class="add-on span3">密码</span>
-							<input type="text" id="password" placeholder="Password">
+							<input type="text" id="password" name="password" placeholder="Password">
 						</div>
 						<div class="form-actions">
 							<button type="submit" class="btn btn-primary">登录</button>
@@ -60,24 +67,22 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
+					<?php
+					   include("conn.php");
+					   $sql="SELECT * FROM `message` order by `total` desc";
+					   $query=mysql_query($sql);
+					   while($row=mysql_fetch_array($query)){
+					?>
+					<tr<?php if($row['total']<=10){echo ' class="error"';}?>>
 						<td><div class="checkdiv"></div></td>
-						<td><a class="name" href="#">张三</a></td>
-						<td><span class="kd">+1</span></td>
-						<td><span class="qj">+2</span></td>
-						<td><span class="cd">+0</span></td>
-						<td><span class="dc">+2</span></td>
-						<td>20</td>
+						<td><a class="name" href="person.php?user=<?php echo $row['user'];?>"><?php echo $row['user'];?></a></td>
+						<td><span class="uarrive">+1</span></td>
+						<td><span class="vacate">+2</span></td>
+						<td><span class="late">+0</span></td>
+						<td><span class="arrive">+2</span></td>
+						<td><?php echo $row['total'];?></td>
 					</tr>
-					<tr class="error">
-						<td><div class="checkdiv"></div></td>
-						<td><a class="name" href="#">张三</a></td>
-						<td><span class="kd">+1</span></td>
-						<td><span class="qj">+2</span></td>
-						<td><span class="cd">+0</span></td>
-						<td><span class="dc">+2</span></td>
-						<td>20</td>
-					</tr>
+					<?php } ?>
 				</tbody>
 			</table>
 		</div>
@@ -86,6 +91,6 @@
 	
 	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-	<script src="../js/main.min.js"></script>
+	<script src="js/main.min.js"></script>
 </body>
 </html>
