@@ -30,19 +30,21 @@ $sql=mysql_query($history);
 			<legend>新闻部门管理<small><a href="index.php">返回首页</a></small></a></legend>
 		</div>
 	</div>
-	<div  class="row-fluid span10 offset1">
-		<h2 class="span3 offset" id="personName"><?php echo $message['user'];?></h2>
-		<div class="span3 offset2">
-			<dl>
-				<dt>旷到</dt>
-				<dd><?php echo $message['uarrive'];?></dd>
-				<dt>请假</dt>
-				<dd><?php echo $message['vacate'];?></dd>
-				<dt>迟到</dt>
-				<dd><?php echo $message['late'];?></dd>
-				<dt>到场</dt>
-				<dd><?php echo $message['arrive'];?></dd>
-			</dl>
+	<div class="row-fluid">
+		<div  class="span8 offset2">
+			<h2 class="span3" id="personName"><?php echo $message['user'];?></h2>
+			<div class="span4 offset1" id="personState">
+				<dl>
+					<dt>旷到</dt>
+					<dd><?php echo $message['uarrive'];?></dd>
+					<dt>请假</dt>
+					<dd><?php echo $message['vacate'];?></dd>
+					<dt>迟到</dt>
+					<dd><?php echo $message['late'];?></dd>
+					<dt>到场</dt>
+					<dd><?php echo $message['arrive'];?></dd>
+				</dl>
+			</div>
 		</div>
 	</div>
 	<div class="row-fluid">
