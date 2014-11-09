@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 3.4.10.1
 -- http://www.phpmyadmin.net
 --
@@ -17,11 +17,11 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- 数据库: `news`
+-- 数据库: `department_mana`
 --
-DROP DATABASE `news`;
-CREATE DATABASE `news` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `news`;
+DROP DATABASE `department_mana`;
+CREATE DATABASE `department_mana` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `department_mana`;
 
 -- --------------------------------------------------------
 
