@@ -27,12 +27,12 @@ $sql=mysql_query($history);
 <body>
 	<div class="row-fluid">
 		<div class="span8 offset2">
-			<legend><a href="index.php">新闻部门管理<small>返回首页</small></a></legend>
+			<legend>新闻部门管理<small><a href="index.php">返回首页</a></small></a></legend>
 		</div>
 	</div>
-	<div  class="span12 offset1">
-		<h2 id="personName"><?php echo $message['user'];?></h2>
-		<div>
+	<div  class="row-fluid span10 offset1">
+		<h2 class="span3 offset" id="personName"><?php echo $message['user'];?></h2>
+		<div class="span3 offset2">
 			<dl>
 				<dt>旷到</dt>
 				<dd><?php echo $message['uarrive'];?></dd>

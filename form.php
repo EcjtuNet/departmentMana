@@ -11,7 +11,7 @@
 <body>
 	<div class="row-fluid">
 		<div class="span10 offset1">
-			<legend>新闻部门管理</legend>
+			<legend>新闻部门管理<small><a href="index.php">返回首页</a></small></legend>
 		</div>
 	</div>
 	<div class="row-fluid"><div class="wrap"><div class="alert">正在处理...</div></div></div>

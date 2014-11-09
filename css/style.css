@@ -2,8 +2,8 @@
 legend {
 	margin-top: 30px;
 }
-legend a {
-	color: #000;
+legend a:hover {
+	text-decoration: none;
 }
 /* 登录 */
 #login {
@@ -102,13 +102,6 @@ span.add {
 }
 
 /* person */
-#personName {
-	float: left;
-	margin-left: 220px;
-}
-#personName + div {
-	float: right;
-}
 dt, dd{
 	margin-top: 14px;
 	float: left;
