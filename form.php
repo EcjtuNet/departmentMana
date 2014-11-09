@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
 	<meta name="author" content="zvenshy@gmail.com">
 	<title>新闻部门管理</title>
-	<link href="http://cdn.bootcss.com/bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,7 +28,7 @@
 					<option value="日新言论">日新言论</option>
 					<option value="日新访谈">日新访谈</option>
 					<option value="交大青年">交大青年</option>
-					<option value="差稿<">差稿</option>
+					<option value="差稿">差稿</option>
 				</select>	
 			</div>
 			<div class="input-prepend value">
@@ -47,8 +47,8 @@
 
 
 	
-	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

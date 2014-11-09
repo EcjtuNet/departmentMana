@@ -27,7 +27,7 @@ $sql=mysql_query($history);
 <body>
 	<div class="row-fluid">
 		<div class="span8 offset2">
-			<legend>新闻部门管理<small>个人页</small></legend>
+			<legend><a href="index.php">新闻部门管理<small>返回首页</small></a></legend>
 		</div>
 	</div>
 	<div  class="span12 offset1">

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
 	<meta name="author" content="zvenshy@gmail.com">
 	<title>新闻部门管理</title>
-	<link href="http://cdn.bootcss.com/bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -76,10 +76,10 @@
 					<tr<?php if($row['total']<=10){echo ' class="error"';}?>>
 						<td><div class="checkdiv"></div></td>
 						<td><a class="name" href="person.php?user=<?php echo $row['user'];?>"><?php echo $row['user'];?></a></td>
-						<td><span class="uarrive">+1</span></td>
-						<td><span class="vacate">+2</span></td>
-						<td><span class="late">+0</span></td>
-						<td><span class="arrive">+2</span></td>
+						<td><span class="uarrive">+<?php echo $row['uarrive'];?></span></td>
+						<td><span class="vacate">+<?php echo $row['vacate'];?></span></td>
+						<td><span class="late">+<?php echo $row['late'];?></span></td>
+						<td><span class="arrive">+<?php echo $row['arrive'];?></span></td>
 						<td><?php echo $row['total'];?></td>
 					</tr>
 					<?php } ?>
@@ -89,8 +89,8 @@
 	</div>
 
 	
-	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script src="js/main.min.js"></script>
 </body>
 </html>

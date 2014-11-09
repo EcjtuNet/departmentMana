@@ -2,7 +2,9 @@
 legend {
 	margin-top: 30px;
 }
-
+legend a {
+	color: #000;
+}
 /* 登录 */
 #login {
 	float: right;
@@ -23,7 +25,7 @@ button.close {
 	top: -20px;
 }
 
-/* tbale */
+/* table */
 td span {
 	cursor: pointer;
 }

@@ -62,7 +62,7 @@ $(document).ready(function () {
 				var newtr = 
 					'<tr>' +
 						'<td><div class="checkdiv"></div></td>' +
-						'<td><a class="name" href="#">' + name + '</a></td>' +
+						'<td><a class="name" href="person.php?user=' + name + '">' + name + '</a></td>' +
 						'<td><span class="uarrive">+0</span></td>' +
 						'<td><span class="vacate">+0</span></td>' +
 						'<td><span class="late">+0</span></td>' + 
@@ -104,7 +104,7 @@ $(document).ready(function () {
 		event.preventDefault();
 		var alertBox = $('.alert');
 		alertBox.slideDown(100);
-		$.post('peration.php', $(this).serialize() + '&submit=update', function (data) {
+		$.post('operation.php', $(this).serialize() + '&submit=update', function (data) {
 			if (data.toUpperCase() === 'OKUPDATE') {
 				$('input').val('');
 				alertBox.text('提交成功！');
