@@ -1,13 +1,13 @@
 <meta charset="UTF-8">
 <?php
    session_start();
-   //error_reporting(0);
-   /*if(!isset($_SESSION['un']))
+   error_reporting(0);
+   if(!isset($_SESSION['un']))
 	{
 		echo "请登录!";
 	}
 	else
-	{ */
+	{ 
 	   if(isset($_POST['submit'])){
 		   $operation = $_POST['submit'];
 	   }
@@ -205,5 +205,5 @@
 	   else{
 		   echo "error";
 	   }
-   //}
+   }
 ?>
