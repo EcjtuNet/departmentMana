@@ -3,6 +3,7 @@ if(!isset($_GET['user'])){
 	echo "error";
 	exit;
 }
+session_start();
 include("conn.php");
 $user=$_GET['user'];
 $sql="SELECT * FROM `message` WHERE `user`='$user'";
@@ -41,8 +42,8 @@ $sql=mysql_query($history);
 					<dd><?php echo $message['vacate'];?></dd>
 					<dt>迟到</dt>
 					<dd><?php echo $message['late'];?></dd>
-					<dt>到场</dt>
-					<dd><?php echo $message['arrive'];?></dd>
+					dt>新闻事故</dt>
+					<dd><?php echo $message['accident'];?></dd>
 				</dl>
 			</div>
 		</div>
@@ -54,6 +55,7 @@ $sql=mysql_query($history);
 					<th class="span6">日期</th>
 					<th class="span6">文体</th>
 					<th class="span2">积分</th>
+					<th class="span2">评分人</th>
 				</thead>
 				<tbody>
 					<?php
@@ -62,6 +64,7 @@ $sql=mysql_query($history);
 						<td><?php echo $history['time'];?></td>
 						<td><?php echo $history['history'];?></td>
 						<td><?php echo $history['value'];?></td>
+						<td><?php echo $_SESSION['un'];?></td>
 					</tr>
 					<?php }?>
 				</tbody>
