@@ -11,14 +11,14 @@
 <body>
 	<div class="row-fluid">
 		<div class="span10 offset1">
-			<legend>新闻部门管理</legend>
+			<legend>新闻部门管理<small><a href="conclusion.php">统计</a></small></legend>
 			<?php
 			session_start ();
 		    if(!isset($_SESSION['un']))
 			{
 				echo '<div id="login"><a href="#loginModal" role="button" data-toggle="modal">登录</a></div>';
 			}else{
-				echo '<div id="login"><a href="form.php">后台</a></div>';
+				echo '<div id="login"><a href="form.php">管理</a></div>';
 			}?>
 		</div>
 	</div>
