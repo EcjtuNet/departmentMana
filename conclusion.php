@@ -1,12 +1,12 @@
 <?php
 include("conn.php");
 $start_time = date("Y-m").'-1';
-$start_time = date("Y-m").'-31';
-$sql="SELECT history, count(*) AS count FROM `history` GROUP BY history WHERE time BETWEEN $start_time AND $end_time";
+$end_time = date("Y-m").'-31';
+$sql="SELECT history, count(*) AS count FROM `history` WHERE time BETWEEN '$start_time' AND '$end_time' GROUP BY history";
 $result=mysql_query($sql);
 $output = array();
-while($row = mysql_fetch_array(result)){
-	$output[] = $row;
+while($row = mysql_fetch_array($result)){
+        $output[$row[0]] = $row[1];
 }
 ?>
 
