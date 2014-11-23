@@ -1,10 +1,5 @@
 <?php
-if(!isset($_GET['user'])){
-	echo "error";
-	exit;
-}
 include("conn.php");
-$user=$_GET['user'];
 $start_time = date("Y-m").'-1';
 $start_time = date("Y-m").'-31';
 $sql="SELECT history, count(*) AS count FROM `history` GROUP BY history WHERE time BETWEEN $start_time AND $end_time";
