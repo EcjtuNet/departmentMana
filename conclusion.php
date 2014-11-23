@@ -51,13 +51,6 @@
 			<table class="table table-hover">
 				<thead>
 					<tr>
-						<th class="span1 dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">操作<b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li id="add">增加</li>
-								<li id="del">删除</li>
-							</ul>
-						</th>
 						<th class="span2">成员</th>
 						<th class="span2">旷到</th>
 						<th class="span2">请假</th>
@@ -67,22 +60,15 @@
 					</tr>
 				</thead>
 				<tbody>
-					<?php
-					   include("conn.php");
-					   $sql="SELECT * FROM `message` order by `total` desc";
-					   $query=mysql_query($sql);
-					   while($row=mysql_fetch_array($query)){
-					?>
-					<tr<?php if($row['total']<=10){echo ' class="error"';}?>>
-						<td><div class="checkdiv"></div></td>
-						<td><a class="name" href="person.php?user=<?php echo $row['user'];?>"><?php echo $row['user'];?></a></td>
-						<td><span class="uarrive">+<?php echo $row['uarrive'];?></span></td>
-						<td><span class="vacate">+<?php echo $row['vacate'];?></span></td>
-						<td><span class="late">+<?php echo $row['late'];?></span></td>
-						<td><span class="arrive">+<?php echo $row['arrive'];?></span></td>
-						<td><?php echo $row['total'];?></td>
+                    <tr>						
+	                    <td><div class="checkdiv"></div></td>
+						<td><a class="name" href="#">xxx</a></td>
+						<td><span class="uarrive">+</span></td>
+						<td><span class="vacate">+</span></td>
+						<td><span class="late">+</span></td>
+						<td><span class="arrive">+</span></td>
+						<td></td>
 					</tr>
-					<?php } ?>
 				</tbody>
 			</table>
 		</div>
@@ -93,13 +79,6 @@
 			<table class="table table-hover">
 				<thead>
 					<tr>
-						<th class="span1 dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">操作<b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li id="add">增加</li>
-								<li id="del">删除</li>
-							</ul>
-						</th>
 						<th class="span1">成员</th>
 						<th class="span1">校园传真</th>
 						<th class="span1">日新提醒</th>
