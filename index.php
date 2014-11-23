@@ -73,7 +73,7 @@
 					   $query=mysql_query($sql);
 					   while($row=mysql_fetch_array($query)){
 					?>
-					<tr<?php if($row['total']<=10){echo ' class="error"';}?>>
+					<tr<?php if($row['total']<=10){echo ' class="error"';} elseif(11<=$row['total']<=15{echo 'class="warning"';})?>>
 						<td><div class="checkdiv"></div></td>
 						<td><a class="name" href="person.php?user=<?php echo $row['user'];?>"><?php echo $row['user'];?></a></td>
 						<td><span class="uarrive">+<?php echo $row['uarrive'];?></span></td>
