@@ -64,7 +64,7 @@ $sql=mysql_query($history);
 						<td><?php echo $history['time'];?></td>
 						<td><?php echo $history['history'];?></td>
 						<td><?php echo $history['value'];?></td>
-						<td><?php echo $_SESSION['un'];?></td>
+						<td><?php echo $history['editor'];?></td>
 					</tr>
 					<?php }?>
 				</tbody>
