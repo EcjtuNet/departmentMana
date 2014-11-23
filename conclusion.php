@@ -79,7 +79,7 @@
 			<table class="table table-hover">
 				<thead>
 					<tr>
-						<th class="span1">成员</th>
+						<th class="span2">成员</th>
 						<th class="span1">校园传真</th>
 						<th class="span1">日新提醒</th>
 						<th class="span1">记者直击</th>

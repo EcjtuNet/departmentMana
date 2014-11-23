@@ -52,8 +52,8 @@ $sql=mysql_query($history);
 		<div class="span10 offset1">
 			<table class="table table-bordered span10 offset1">
 				<thead>
-					<th class="span6">日期</th>
-					<th class="span6">文体</th>
+					<th class="span5">日期</th>
+					<th class="span5">文体</th>
 					<th class="span2">积分</th>
 					<th class="span2">评分人</th>
 				</thead>
