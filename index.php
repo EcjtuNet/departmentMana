@@ -18,7 +18,7 @@
 			{
 				echo '<div id="login"><a href="#loginModal" role="button" data-toggle="modal">登录</a></div>';
 			}else{
-				echo '<div id="login"><a href="form.php">后台</a></div>';
+				echo '<div id="login"><a href="form.php">管理</a></div>';
 			}?>
 		</div>
 	</div>
@@ -62,8 +62,8 @@
 						<th class='span2'>旷到</th>
 						<th class='span2'>请假</th>
 						<th class='span2'>迟到</th>
-						<th class='span2'>到场</th>
-						<th class='span1'>积分</th>
+						<th class='span2'>新闻事故</th>
+						<th class='span1'>工作点</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -80,6 +80,7 @@
 						<td><span class="vacate">+<?php echo $row['vacate'];?></span></td>
 						<td><span class="late">+<?php echo $row['late'];?></span></td>
 						<td><span class="arrive">+<?php echo $row['arrive'];?></span></td>
+						<td><span class="arrive">+<?php echo $row['accident'];?></span></td>
 						<td><?php echo $row['total'];?></td>
 					</tr>
 					<?php } ?>
